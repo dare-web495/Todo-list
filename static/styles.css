@@ -1,0 +1,28 @@
+body{
+    background-color: #1f1f1f !important;
+}
+
+.space{
+    padding-bottom: 5px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+    color: #fff;
+    text-decoration: none;
+    background-color: #1f1f1f !important;
+    border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+}
+ .mb-3 {
+    margin-bottom: 0px !important;
+ }
+
+ .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff !important;
+}

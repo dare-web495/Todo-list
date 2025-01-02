@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+        <title>
+            Todo List
+        </title>
+    </head>
+    <body>
+        <div class="container d-flex align-items-center justify-content-center" style="height: 80vh;">
+            <div class="grid gap-3">
+                <div  class="d-flex justify-content-center p-2 g-col-6">
+                    <h3>Create a todo list</h3>
+                </div>
+
+                <div class="d-flex justify-content-center p-2 g-col-6">
+                    <!-- Where you create your new todo list -->
+                    <form method="POST" action="/" class="d-flex">
+                        <input class="form-control me-2" name="todo" placeholder="Enter your todo list" required>
+                        <button class="btn btn-primary" type="submit">Create</button>
+                    </form>
+                </div>
+
+
+                <div class="d-flex justify-content-center p-2 g-col-6">
+                    <!--Where it will show you your new list-->
+                    <ul class="list-group list-group-flush">
+                        {% for item in list %}
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1 space" type="checkbox" value="" id="firstCheckbox">
+                                <label class="form-check-label" for="firstCheckbox">{{ item }}</label>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="d-flex justify-content-center p-2 g-col-6">
+                    <!--If you want to delete your list-->
+                    <form method="POST" action="/delete">
+                        <button class="btn btn-primary mb-3" type="submit">New todo list</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
